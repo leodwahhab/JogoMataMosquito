@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    cursor: url(img/mata_mosquito.png) 30 30, auto;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: url('img/bg.jpg')  center center repeat-y;
+    background-size: cover;
+}
+
+/* -- mosquitos -- */
+.mosquito1{
+    height: 50px;
+    width: 50px;
+}
+
+.mosquito2{
+    height: 70px;
+    width: 70px;
+}
+
+.mosquito3{
+    height: 90px;
+    width: 90px;
+}
+
+/* -- painel de informações -- */
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* -- configurando páginas -- */
+.index, .vitoria, .game_over{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* input combobox da página index */
+.index select{
+    height: 50px;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 100%;
+    color: grey;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.index select:active{
+    box-shadow: 1px 1px 5px 5px #29609aab;
+}
+
+/* -- botões -- */
+button{
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-family:monospace;
+    transition: background 0.2s linear;
+    cursor: pointer;
+}
+
+/* botão página index */
+.index button{
+    width: 120px;
+    height: 50px;
+    background: rgb(194, 50, 74);
+    border: none;
+}
+
+.index button:hover{
+    background:rgb(114, 29, 43);
+}
+
+.index button:active{
+    background: rgb(56, 14, 21);
+}
+
+/* botão pagina game over */
+.game_over button{
+    border: 2px solid black;
+    background: #1d446e;
+}
+
+.game_over button:active{
+    background: #07101a;
+}
+
+.game_over button:hover{
+    background: #0e2135;
+}
+
+/* botão página vitória */
+.vitoria button{
+    border: 2px solid black;
+    background: green;
+}
+.vitoria button:hover{
+    background: rgb(0, 87, 0);
+}
+
+.vitoria button:active{
+    background:rgb(0, 48, 0);
+}
+
+/* media query */
+@media only screen and (max-width: 770px){
+    body{
+        background-position: 30%;
+    }
+
+    img{
+        width: 90%;
+    }
+
+    .vidas{
+        display: flex;
+        gap: 6px;
+        width: 20%;
+    }
+
+}
